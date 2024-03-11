@@ -1,0 +1,517 @@
+@font-face {
+    font-family: 'ARK';
+    src: url('../assets/fonts/NBArchitektStd-Light.otf')
+}
+
+/* #welcome-screen {
+    display: none !important;
+} */
+
+.no-scroll 
+{
+    overflow: hidden;
+    height: 100%;
+}
+
+::-webkit-scrollbar
+{ 
+    display: none; 
+}
+
+#to-top 
+{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: black;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 9999; 
+}
+
+.arrow-to-top 
+{
+    font-size: 2em;
+    color: aliceblue;
+    padding-top: 0.2em;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.navbar {
+    background-color: black;
+    padding: 1.7rem;
+    text-align: left;
+}
+
+.back-to-menu {
+    color: aliceblue;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    color: aliceblue;
+    font-family: 'ARK';
+}
+
+.back-to-menu:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #4d90fe;
+    transition: color 0.3s;
+}
+
+.border
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+.border::after {
+    content: '> International space station';
+    position: absolute;
+    top: 112px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+span
+{
+    font-weight: bold;
+}
+
+.object-img
+{
+    width: 80%;
+    height: auto;
+}
+
+.object-main {
+    display: flex;
+    padding-top: 10em;
+    padding-bottom: 5em;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.object-content {
+    display: flex;
+    width: 100%; 
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.object-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 800px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/human-made/ISS/maxresdefault.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.object-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%, 
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+/* .object-stats {
+    flex: 1;
+    list-style-type: none;
+    padding-left: 6em;
+    padding-top: 2.8em;
+    color: aliceblue; 
+    font-size: 2rem; 
+    z-index: 3;
+}
+
+.object-stats li {
+    margin-bottom: 10px;
+} */
+
+.object-description {
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    padding-top: 4.5em;
+    width: 80%; 
+    color: aliceblue;
+    font-size: 1.5rem; 
+    text-align: justify;
+    z-index: 3;
+}
+
+.border-hst
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border-hst::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+.border-hst::after {
+    content: '> Hubble Space telescope';
+    position: absolute;
+    top: 112px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.object-img-hst
+{
+    width: 60%;
+    height: auto;
+}
+
+.object-content-hst {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 770px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/human-made/HST/Andrew_Feustel_performs_work_on_the_Hubble_Space_Telescope.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.object-content-hst:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%, 
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.border-jwst
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border-jwst::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+.border-jwst::after {
+    content: '> James Webb space telescope';
+    position: absolute;
+    top: 112px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.object-img-jwst
+{
+    width: 60%;
+    height: auto;
+}
+
+.object-content-jwst {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 750px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/human-made/JWST/33433274343_277deba9eb_o.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.object-content-jwst:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%, 
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.border-voyager
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border-voyager::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+.border-voyager::after {
+    content: '> Voyager 1 & 2';
+    position: absolute;
+    top: 112px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.object-img-voyager
+{
+    width: 50%;
+    height: auto;
+}
+
+.object-content-voyager {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 750px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/human-made/Voyager 1-2/record-diagram.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.object-content-voyager:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%, 
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.border-pers
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border-pers::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+.border-pers::after {
+    content: '> Perseverance';
+    position: absolute;
+    top: 112px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.object-img-pers
+{
+    width: 50%;
+    height: auto;
+}
+
+.object-content-pers {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 750px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/human-made/Perseverance/download.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.object-content-pers:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.welcome-screen 
+{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: aliceblue;
+    opacity: 1;
+    z-index: 1000;
+    animation: fadeOut 0.8s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.welcome-text {
+    opacity: 0;
+    animation: fadeInText 1s ease forwards;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000; 
+}
+
+.fade-out {
+    animation: fadeOut2 1s;
+}
+
+@keyframes LoadIn
+{
+    from
+    {
+        opacity: 0;
+    }
+
+    to
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut 
+{
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut2 {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

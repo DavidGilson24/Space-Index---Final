@@ -1,0 +1,806 @@
+@font-face {
+    font-family: 'ARK';
+    src: url('../assets/fonts/NBArchitektStd-Light.otf')
+}
+
+/* #welcome-screen {
+    display: none !important;
+} */
+
+.no-scroll 
+{
+    overflow: hidden;
+    height: 100%;
+}
+
+::-webkit-scrollbar
+{ 
+    display: none; 
+}
+
+#to-top 
+{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: black;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 9999; 
+}
+
+.arrow-to-top 
+{
+    font-size: 2em;
+    color: aliceblue;
+    padding-top: 0.2em;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.navbar {
+    background-color: black;
+    padding: 1.7rem;
+    text-align: left;
+}
+
+.back-to-menu {
+    color: aliceblue;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    color: aliceblue;
+    font-family: 'ARK';
+}
+
+.back-to-menu:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #4d90fe; 
+    transition: color 0.3s;
+}
+
+.border
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+.border::after {
+    content: '> MERCURY';
+    position: absolute;
+    top: 112px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+span
+{
+    font-weight: bold;
+}
+
+.mercury-video 
+{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -3em;
+    width: 80%;
+    height: auto;
+}
+
+.mercury-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.mercury-content {
+    display: flex;
+    width: 100%; 
+    margin-top: 0px; 
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.mercury-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 1100px;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/mercury/mercuryspider-1280x720.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.mercury-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%, 
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.mercury-stats {
+    flex: 1;
+    list-style-type: none;
+    padding-left: 6em;
+    padding-top: 2.8em;
+    color: aliceblue; 
+    font-size: 2rem; 
+    z-index: 3;
+}
+
+.mercury-stats li {
+    margin-bottom: 10px;
+}
+
+.mercury-description {
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    padding-top: 17em;
+    width: 80%; 
+    color: aliceblue;
+    font-size: 1.5rem; 
+    text-align: justify;
+    z-index: 3;
+}
+
+.border-venus
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border-venus::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 250px;
+}
+
+.border-venus::after {
+    content: '> VENUS';
+    position: absolute;
+    top: 262px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.venus-main{
+    padding-top: 17em;
+}
+
+.venus-video 
+{
+    display: block;
+    margin: 0 auto;
+    padding-left: 20vw;
+    padding-bottom: 2em;
+    width: 55%;
+    height: auto;
+}
+
+.venus-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 1130px;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/venus/venus-remapped-and-colorized-800x800.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.venus-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%, 
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.border-earth
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border-earth::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120px;
+}
+
+.border-earth::after {
+    content: '> EARTH';
+    position: absolute;
+    top: 132px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.earth-main{
+    padding-top: 8em;
+}
+
+.earth-video 
+{
+    padding-top: -2em;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -3em;
+    margin-top: -2em;
+    width: 44%;
+    height: auto;
+}
+
+.earth-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 1120px;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/earth/1030_Earth_atmosphere_explainer.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.earth-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%, 
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.border-mars
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border-mars::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120px;
+}
+
+.border-mars::after {
+    content: '> MARS';
+    position: absolute;
+    top: 132px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.mars-main{
+    padding-top: 8em;
+}
+
+.mars-video 
+{
+    padding-top: -2em;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -6em;
+    margin-top: -2em;
+    width: 44%;
+    height: auto;
+}
+
+.mars-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 1120px;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/mars/PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.mars-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.border-jupiter
+{
+    position: relative;
+}
+
+.border-jupiter::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120px;
+}
+
+.border-jupiter::after {
+    content: '> JUPITER';
+    position: absolute;
+    top: 132px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.jupiter-main{
+    padding-top: -10em;
+}
+
+.jupiter-video 
+{
+    display: block;
+    margin: 0 auto;
+    margin-top: 7em;
+    width: 40%;
+    height: auto;
+}
+
+.jupiter-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 1170px;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/jupiter/clydes-spot-jupiter-juno.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.jupiter-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.border-saturn
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border-saturn::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+.border-saturn::after {
+    content: '> SATURN';
+    position: absolute;
+    top: 112px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.saturn-video 
+{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -8em;
+    width: 80%;
+    height: auto;
+}
+
+.saturn-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.saturn-content {
+    display: flex;
+    width: 100%; 
+    margin-top: 0px; 
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.saturn-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 1000px;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/saturn/image_6492_1e-Cassini-Grand-Finale-Science.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.saturn-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%, 
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.border-uranus
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border-uranus::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+.border-uranus::after {
+    content: '> URANUS';
+    position: absolute;
+    top: 112px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.uranus-video 
+{
+    display: block;
+    margin: 0 auto;
+    margin-top: -6em;
+    margin-bottom: -8em;
+    width: 100%;
+    height: auto;
+}
+
+.uranus-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.uranus-content {
+    display: flex;
+    width: 100%; 
+    margin-top: 0px; 
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.uranus-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 1000px;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/uranus/14321438_max.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.uranus-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.border-neptune
+{
+    position: relative;
+    padding-bottom: 2em;
+}
+
+.border-neptune::before 
+{
+    content: '';
+    display: block;
+    height: 1px; 
+    background-color: #ffffff;
+    width: calc(100vw - 10vw);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+}
+
+.border-neptune::after {
+    content: '> NEPTUNE';
+    position: absolute;
+    top: 112px; 
+    left: 5vw;
+    font-size: 2em;
+    color: aliceblue;
+}
+
+.neptune-video 
+{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -3em;
+    width: 80%;
+    height: auto;
+}
+
+.neptune-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.neptune-content {
+    display: flex;
+    width: 100%; 
+    margin-top: 0px; 
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.neptune-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 1100px;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: url('../assets/neptune/93eed2c72fc2d83aba0e969bea741145.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.neptune-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.65) 20%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0,0.65) 80%,
+        rgba(0,0,0,1) 100%
+    );
+}
+
+.welcome-screen 
+{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: aliceblue;
+    opacity: 1;
+    z-index: 1000;
+    animation: fadeOut 0.8s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.welcome-text {
+    opacity: 0;
+    animation: fadeInText 1s ease forwards;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000; 
+}
+
+.fade-out {
+    animation: fadeOut2 1s;
+}
+
+@keyframes LoadIn
+{
+    from
+    {
+        opacity: 0;
+    }
+
+    to
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut 
+{
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut2 {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

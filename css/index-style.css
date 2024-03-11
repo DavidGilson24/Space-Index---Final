@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'NASA';
+    src: url('../assets/fonts/Nasa.ttf')
+}
+
+@font-face {
+    font-family: 'ARK';
+    src: url('../assets/fonts/NBArchitektStd-Light.otf')
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: aliceblue;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    filter: brightness(60%);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 84px;
+    font-family: 'NASA', sans-serif;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    font-family: "ARK";
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 15px;
+    transition: color 0.5s ease;
+}
+
+nav a:hover {
+    color: #4d90fe; 
+    text-decoration: none;
+}
+
+/* .spotify-embed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300px; 
+    height: 80px; 
+    border-radius: 12px; 
+    z-index: 10; 
+} 
+*/
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000; 
+}
+
+.fade-out {
+    animation: fadeOut 0.5s;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
