@@ -26,14 +26,29 @@
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="back-to-menu">
-            &#x2190; Back to Menu
-        </a>
+        <div class="back"></div>
+            <a href="index.html" class="back-to-menu">
+                &#x2190; Go Back
+            </a>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+            <div class="dropdown-content">
+                <a href="#ISS">International Space Station</a>
+                <a href="#HST">Hubble Space Telescope</a>
+                <a href="#JWST">James Webb Space Telescope</a>
+                <a href="#VG">Voyager 1 & 2</a>
+                <a href="#PER">Perseverance</a>
+            </div>
+        </div>
+        
     </nav>
     
     <div class="border"></div>
 
-    <div class="object-main">
+    <div class="object-main" id="ISS">
         <img class="object-img" src="../assets/human-made/ISS/jsc2021e064215_alt~large.jpg"></img>
 
 
@@ -59,7 +74,7 @@
 
     <div class="border-hst"></div>
 
-    <div class="object-main">
+    <div class="object-main" id="HST">
         <img class="object-img-hst" src="../assets/human-made/HST/HST-SM4.jpeg"></img>
 
 
@@ -85,7 +100,7 @@
 
     <div class="border-jwst"></div>
 
-    <div class="object-main">
+    <div class="object-main" id="JWST">
         <img class="object-img-jwst" src="../assets/human-made/JWST/755409main_webb.jpg"></img>
 
 
@@ -111,7 +126,7 @@
 
     <div class="border-voyager"></div>
 
-    <div class="object-main">
+    <div class="object-main" id="VG">
         <img class="object-img-voyager" src="../assets/human-made/Voyager 1-2/Spacecraft_Profile.jpg"></img>
 
 
@@ -137,7 +152,7 @@
 
     <div class="border-pers"></div>
 
-    <div class="object-main">
+    <div class="object-main" id="PER">
         <img class="object-img-pers" src="../assets/human-made/Perseverance/0014244_mars-rover-perseverance-ingenuity-helicopter_620.png"></img>
 
 

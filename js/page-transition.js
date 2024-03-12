@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     document.body.style.opacity = "1";
 
-    document.querySelectorAll('nav a').forEach(link => {
+    document.querySelectorAll('.back-to-menu').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const destination = this.href;

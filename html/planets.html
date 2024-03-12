@@ -26,14 +26,32 @@
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="back-to-menu">
-            &#x2190; Back to Menu
-        </a>
+        <div class="back"></div>
+            <a href="index.html" class="back-to-menu">
+                &#x2190; Go Back
+            </a>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+            <div class="dropdown-content">
+                <a href="#mercury">Mercury</a>
+                <a href="#venus">Venus</a>
+                <a href="#earth">Earth</a>
+                <a href="#mars">Mars</a>
+                <a href="#jupiter">Jupiter</a>
+                <a href="#saturn">Saturn</a>
+                <a href="#uranus">Uranus</a>
+                <a href="#neptune">Neptune</a>
+            </div>
+        </div>
+        
     </nav>
     
     <div class="border"></div>
 
-    <div class="mercury-main">
+    <div class="mercury-main" id="mercury">
         <video id="mercuryVideo" class="mercury-video" src="../assets/mercury/mercury.mp4" autoplay muted loop></video>
 
         <script>
@@ -65,7 +83,7 @@
 
     <div class="border-venus"></div>
 
-    <div class="venus-main">
+    <div class="venus-main" id="venus">
         <video id="venusVideo" class="venus-video" src="../assets/venus/venus.mp4" autoplay muted loop></video>
 
         <script>
@@ -97,7 +115,7 @@
 
     <div class="border-earth"></div>
 
-    <div class="earth-main">
+    <div class="earth-main" id="earth">
         <video id="earthVideo" class="earth-video" src="../assets/earth/earth.mp4" autoplay muted loop></video>
 
         <script>
@@ -131,7 +149,7 @@
 
     <div class="border-mars"></div>
 
-    <div class="mars-main">
+    <div class="mars-main" id="mars">
         <video id="marsVideo" class="mars-video" src="../assets/mars/Y2meta.app-Mars Spin Animation _ Mars 2005 _ 1080p-(1080p).mp4" autoplay muted loop></video>
 
         <script>
@@ -163,7 +181,7 @@
 
     <div class="border-jupiter"></div>
 
-    <div class="jupiter-main">
+    <div class="jupiter-main" id="jupiter">
         <video id="jupiterVideo" class="jupiter-video" src="../assets/jupiter/jupiter.mp4" autoplay muted loop></video>
 
         <script>
@@ -197,7 +215,7 @@
 
     <div class="border-saturn"></div>
 
-    <div class="saturn-main">
+    <div class="saturn-main" id="saturn">
         <video id="saturnVideo" class="saturn-video" src="../assets/saturn/saturn.mp4" autoplay muted loop></video>
 
         <script>
@@ -229,7 +247,7 @@
 
     <div class="border-uranus"></div>
 
-    <div class="uranus-main">
+    <div class="uranus-main" id="uranus">
         <video id="uranusVideo" class="uranus-video" src="../assets/uranus/uranus.mp4" autoplay muted loop></video>
 
         <script>
@@ -261,7 +279,7 @@
 
     <div class="border-neptune"></div>
 
-    <div class="neptune-main">
+    <div class="neptune-main" id="neptune">
         <video id="neptuneVideo" class="neptune-video" src="../assets/neptune/neptune.mp4" autoplay muted loop></video>
 
         <script>
