@@ -18,7 +18,7 @@
     display: none; 
 }
 
-#to-top 
+#to-top
 {
     position: fixed;
     right: 30px;
@@ -157,20 +157,6 @@ span
         rgba(0,0,0,1) 100%
     );
 }
-
-/* .object-stats {
-    flex: 1;
-    list-style-type: none;
-    padding-left: 6em;
-    padding-top: 2.8em;
-    color: aliceblue; 
-    font-size: 2rem; 
-    z-index: 3;
-}
-
-.object-stats li {
-    margin-bottom: 10px;
-} */
 
 .object-description {
     font-family: "Poppins", sans-serif;
